@@ -1,3 +1,643 @@
-p{
-    color: red;
+/*TODO Make it responsive*/
+/*TODO Remove extra fonts and images*/
+
+@font-face {
+    font-family: montserrat;
+    src: url("resources/fonts/Montserrat-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url("resources/fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url("resources/fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url("resources/fonts/Poppins-Bold.ttf");
+    font-weight: 700;
+}
+
+:root{
+    --prime-color: #18273c;
+    --sec-color: #3060ef;
+    --third-color: #FDDF25;
+    --t-color1: #000;
+    --t-color2: #fff;
+    --prime-font: poppins;
+    font-size: 16px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.cont{
+    max-width: 1280px;
+}
+
+/*---Navbar---*/
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--prime-color);
+    color: var(--t-color2);
+    padding: 1.2rem;
+    font-family: var(--prime-font);
+}
+
+.navbar-right *, .navbar-left *{
+    margin: 0 0.5rem;
+}
+
+.navbar-left{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-left img{
+    width: 3rem;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right button{
+    cursor: pointer;
+    font-family: var(--prime-font);
+    background-color: var(--sec-color);
+    font-weight: bold;
+    border: none;
+    color: var(--t-color2);
+    border-radius: 50px;
+    padding: 10px 40px;
+    padding: 0.6rem 2.2rem;
+    margin-left: 3rem;
+}
+
+
+
+/*---Hero---*/
+
+.hero{
+    min-height: 60%;
+    height: 70%;
+    width: 100%;
+    background-image: url("resources/images/hero_bg.jpg");
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    box-shadow: 0px 5px 10px 0px #0000002e;
+    z-index: 10;
+    position: relative;
+}
+
+.hero div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: var(--prime-font);
+}
+
+.hero div h1{
+    font-size: 3rem;
+}
+
+.hero div h1 span{
+    border-bottom: 5px var(--sec-color) solid;
+}
+
+.hero div p{
+    font-size: 1.3rem;
+}
+
+/*---Info Cards---*/
+/*TODO size all boxes equally*/
+
+.info-cards{
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.info-cards div{
+    padding: 2rem 3rem;
+    font-family: var(--prime-font);
+}
+
+.info-cards div h1{
+    color: #FDE024;
+    margin-bottom: 5px;
+}
+
+.info-cards div p{
+    color: var(--t-color2);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.info-cards div button{
+    color: #FDE024;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-family: var(--prime-font);
+    font-weight: bold;
+}
+
+
+
+.info-cards div:nth-child(1){
+    background-color: #3061EE;
+    border-bottom-left-radius: 20px;
+}
+
+.info-cards div:nth-child(2){
+    background-color: #2652CD;
+}
+
+.info-cards div:nth-child(3){
+    background-color: #1B41AE;
+    border-bottom-right-radius: 20px;
+}
+
+/*---About Section---*/
+.about-sec{
+    font-family: var(--prime-font);
+    max-width: 80%;
+    margin: 5rem auto;
+}
+
+.about-sec .about-head{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.about-sec .about-head h1{
+    color: var(--sec-color);
+}
+
+.about-sec .about-head p{
+    color: var(--t-color-1);
+    font-size: 1.1rem;
+}
+
+.about-sec .about-bottom{
+    display: flex;
+}
+
+.about-sec .about-text{
+    color: #696969;
+    border: 0px solid black;
+    flex: 1.5;
+    font-size: 1.1rem;
+}
+
+.about-sec .about-img{
+    border: 0px solid brown;
+    flex: 1;
+    background-image: url("resources/images/about_bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/*---Call-Sec---*/
+.call-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    
+    font-family: var(--prime-font);
+    color: var(--t-color2);
+
+    background-image: url("resources/images/call_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.call-sec h1{
+    margin-bottom: 20px;
+}
+
+.call-sec div{
+    position: relative;
+}
+
+.call-sec input{
+    font-family: var(--prime-font);
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    padding: 0.9rem 2rem;
+
+    width: 35rem;
+
+}
+
+.call-sec button{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    border: none;
+    font-family: var(--prime-font);
+    font-weight: bold;
+    border-radius: 50px;
+
+    background-color: var(--third-color);
+
+    height: 100%;
+    padding: 0.4rem 2rem;
+
+    cursor: pointer;
+    
+}
+
+/*---Services-Sec---*/
+
+.services-sec{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+.services-left{
+    flex: 0.8;
+    font-family: var(--prime-font);
+}
+
+.services-left p:nth-child(1){
+    font-size: 1.2rem;
+    color: black;
+}
+
+.services-left h1{
+    color: var(--sec-color);
+    margin-bottom: 20px;
+}
+
+.services-left p{
+    font-size: 0.9rem;
+    color: #696969;
+}
+
+.services-left img{
+    max-width: 85%;
+    margin: 20px 0px;
+}
+
+.services-right{
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.services-right > p{
+    color: var(--sec-color);
+    font-family: var(--prime-font);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.service-card{
+    margin: 0 0 3rem 0;
+    padding: 20px;
+    border-radius: 10px;
+
+    font-family: var(--prime-font);
+
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.service-card div{
+    background-color: #FFF9DF;
+    width: 2.5rem;
+    height: 2.2rem;
+    border-radius: 10px;
+    background-image: url("resources/icons/tv.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 10px;
+    background-size: cover;
+}
+
+.service-card  p:first-of-type{
+    font-weight: bold;
+    color: var(--t-color1);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.service-card p{
+    font-size: 0.9rem;
+    color: #696969;
+}
+
+/*---Crime-Sec---*/
+.crime-sec{
+    font-family: var(--prime-font);
+    margin: 0 auto;
+
+    padding: 5rem;
+
+    background-image: url("resources/images/crime_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.crime-sec h1, h3{
+    text-align: center;
+}
+
+.crime-sec h1{
+    margin-bottom: 30px;
+}
+
+.crime-sec p{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 0.9rem;
+}
+
+.crime-sec p:last-child{
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+/*---clients-sec---*/
+.clients-sec{
+    font-family: var(--prime-font);
+    text-align: center;
+    padding: 50px;
+}
+
+.clients-sec > p{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.clients-sec > h1{
+    margin-bottom: 40px;
+    color: var(--sec-color);
+}
+
+.clients-sec > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.clients-sec > div > div{
+}
+
+.clients-sec > div > div > img{
+    width: 10rem;
+    height: 8rem;
+}
+
+/*---Testimonial-Sec---*/
+
+.testimonial-sec{
+    display: flex;
+    background-color: #fcf9ef;
+    font-family: var(--prime-font);
+    padding: 4rem;
+}
+
+.round-img{
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 100px;
+
+    position: absolute;
+    left: -1.5rem;
+    top: -1.5rem;
+
+    border: 5px solid white;
+}
+
+.testimonial-left{
+    flex: 0.5;
+}
+
+.testimonial-left p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-left h1:last-of-type{
+    color: var(--third-color);
+    text-decoration: underline;
+}
+
+.testimonial-left img{
+    max-width: 50%;
+    margin-top: 20px;
+}
+
+.testimonial-right{
+    flex: 1;
+}
+
+.testimonial-right > div{
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px 25px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.testimonial-right > div > p{
+    color: #4b4b4b;
+}
+
+.testimonial-right > div > p:last-child{
+    font-weight: bold;
+    color: var(--t-color-1);
+}
+
+/*---footer---*/
+.footer{
+    background-color: var(--prime-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px 10px;
+    font-family: var(--prime-font);
+    color: var(--t-color2);
+}
+
+.footer h2{
+    color: var(--third-color);
+}
+
+.footer p{
+    font-size: 0.8rem;
+}
+
+.footer img{
+    margin: 0px 10px;
+}
+
+/*---Media-Queries---*/
+
+@media screen and (max-width: 1000px){
+    :root{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    :root{
+        font-size: 13px;
+    }
+
+    .crime-sec p{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar-right img{
+        display: none;
+    }
+
+    .hero div{
+        width: 100%;
+    }
+
+    .footer{
+        flex-direction: column;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .footer *{
+        margin: 5px 0px;
+    }
+}   
+
+@media screen and (max-width: 600px){
+    .about-sec .about-img{
+        display: none;
+    }
+
+    .services-sec{
+        width: 80%;
+        flex-direction: column;
+    }
+
+    .services-left img{
+        display: none;
+    }
+
+    .testimonial-sec{
+        flex-direction: column;
+    }
+
+    .testimonial-left img{
+        display: none;
+    }
+
+    .testimonial-right{
+        margin-top: 4rem;
+    }
+
+    .info-cards{
+        flex-direction: column;
+    }
+
+    .info-cards div:nth-child(1){
+        border-bottom-left-radius: 0px;
+    }
+
+    .info-cards div:nth-child(3){
+        border-bottom-left-radius: 20px;
+    }
+
+    .clients-sec > div{
+        flex-direction: column;
+    }
+
+    .call-sec input{
+        width: 90%;
+    }
+
+    .call-sec button{
+        position: relative;
+        margin: 5px 0px;
+    }
+
+    .crime-sec p{
+        width: 100%;
+    }
+
+    .services-right{
+        padding: 2rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .navbar-right{
+        display: none;
+    } 
+
+    :root{
+        font-size: 11px;
+    }
+
+
+}
+
+@media screen and (max-width: 350px){
+    :root{
+        font-size: 10px;
+    }
+
+    .call-sec input{
+        width: 100%;
+    }
+
+    .call-sec{
+        padding: 1rem;
+    }
+
+
 }
